@@ -1,6 +1,6 @@
 // Config
 var config = require('./../../config');
-var port = process.env.PORT || 8000;
+var port = process.env.PORT || 80;
 
 // Dependencias
 var io = require('socket.io')(port);
