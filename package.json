@@ -1,0 +1,18 @@
+{
+  "name": "demo",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "6.9.1"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "demo",
+  "license": "MIT",
+  "dependencies": {
+    "shortid": "^2.2.6",
+    "socket.io": "^1.4.6"
+  }
+}
