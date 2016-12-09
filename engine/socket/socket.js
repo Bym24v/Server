@@ -1,6 +1,6 @@
 // Config
 var config = require('./../../config');
-var port = process.env.PORT || 80;
+var port = process.env.PORT || 8000;
 
 // Dependencias
 var io = require('socket.io')(port);
@@ -87,6 +87,15 @@ var SocketKira = {
             socket.broadcast.emit('coors', currentUser);
             console.log(currentUser.name + " coors " + currentUser.posicion + " rota " + currentUser.rotacion);
 
+        });
+
+
+        socket.on('online', function(){
+          socket.emit('online', { online: clients.length })
+        });
+
+        socket.on('shooting', function(data){
+          socket.broadcast.emit('shooting', data)
         });
 
         socket.on('chat', function(data){
